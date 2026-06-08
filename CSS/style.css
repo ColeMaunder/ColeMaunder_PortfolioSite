@@ -1,18 +1,30 @@
 
 #navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #424242;
+    text-align: center;
     text-decoration: none;
     overflow: hidden;
     list-style-type: none;
     display: flex;
-    gap: 15px;
-    font-size: clamp(18pt, 2vw, 80pt);
-    color: black;
+    gap: 8%;
+    margin: 2% 5% 5% 25%;
+    font-size: clamp(12pt, 2vw, 80pt);
+    color: #FAFAFA;
+}
+#navigation #activePage {
+    color: #5a5a5a;
 }
 body {
     background-color: #212121;
 }
 h1{
-    color: blue;
+    margin-top: 70px;
+    color: rgb(214, 214, 214);
 }
 
 a {
