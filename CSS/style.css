@@ -1,0 +1,28 @@
+
+#navigation {
+    text-decoration: none;
+    overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    font-size: clamp(18pt, 2vw, 80pt);
+    color: black;
+}
+body {
+    background-color: #212121;
+}
+h1{
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+    color:#FAFAFA;
+}
+a:hover {
+    color: #2196F3;
+}
+
+p {
+    color:#FAFAFA;
+}
