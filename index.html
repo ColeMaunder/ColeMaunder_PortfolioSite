@@ -7,16 +7,46 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="JS/index.js" defer></script>
 </head>
-<body>
-    <ul id="navigation">
-        <li><a id = "activePage" >Home</a></li>
-        <li><a href="html/about.html">About</a></li>
-        <li><a href="html/projects.html">Projects</a></li>
-        <li><a href="html/works.html">Works</a></li>
-        <li><a href="html/contact.html">Contact</a></li>
-    </ul>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is a collection of my work and projects. Feel free to explore and learn</p>
-    
-</body>
+    <body>
+        <header class="top-nav">
+            <div id = "name" >Cole M Portfolio</div>
+        
+            <nav class="navigation">
+                <li><a id = "activePage" >Home</a></li>
+                <li><a href="html/about.html">About</a></li>
+                <li><a href="html/projects.html">Projects</a></li>
+                <li><a href="html/works.html">Works</a></li>
+                <li><a href="html/contact.html">Contact</a></li>
+            </nav>
+            <a href="#contact" id = "talkBtn">Let's talk</a>
+        </header>
+        <main class="main-content">
+            <section id = "splashScreen">
+                <h1>Portfolio</h1>
+            </section>
+            <section id = "aboutMe">
+                <h2>Who am I</h2>
+                <section class = "body">
+                    <img src="Images/Me.jpg" alt="Photo of me"> 
+                    <p>Hi, I'm Cole Maunder, a passionate software developer with a love for creating innovative solutions. With a background in computer science and a knack for problem-solving, I enjoy crafting efficient and user-friendly applications. My journey in coding has been driven by curiosity and a desire to make a positive impact through technology. When I'm not coding, you can find me exploring new programming languages, contributing to open-source projects, or indulging in my love for gaming.</p>
+                </section>
+            </section>
+            <section id = "projects">
+                <h2>Projects</h2>
+                <p>Here are some of my recent projects:</p>
+                <div class = "displayProjects" id = "displayProjects">
+                    <div class = "project" id = "projectDefalt">
+                        <a href="html/contact.html">
+                            <img class = "project-image" src="Images/hades-2.jpg" alt="Defalt Project Image" >
+                        </a>
+                        <p class = "project-name">Defalt Name</p>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer id ="contact">
+            <p>&copy; 2024 Cole M. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
