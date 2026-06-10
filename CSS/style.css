@@ -57,11 +57,6 @@ body {
         #activePage {
         color: #5a5a5a;
         }
-
-        #contact {
-            grid-area: footer;
-            background-color: #4b4a4a80;
-        }
     }
 
     #talkBtn {
@@ -84,7 +79,7 @@ body {
     grid-area: main;
     display: flex;
     display: grid; 
-    grid-template-rows: calc(100vh) 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "splashScreen"
@@ -99,17 +94,17 @@ body {
         background-size: cover;
         background-color: #0e0e0e;
         align-items: center;
+        height: calc(100vh - 60px);
     }
-
     #aboutMe {
         grid-area: aboutMe;
-        padding: 5rem 2rem 1rem 2rem;
+        padding: 5rem 2rem 2rem 2rem;
 
         .body{
             display: flex;
 
             p {
-                font-size: clamp(2rem, 2vw, 4rem);
+                font-size: clamp(2rem, 2vw, 3rem);
             }
 
             img {
@@ -122,43 +117,88 @@ body {
 
     #projects {
         grid-area: projects;
-        padding: 2rem;
         text-align: center;
+        padding: 2rem;
 
         .displayProjects{
-            padding: 3rem;
-            gap: 20px;
-
             .project{
-
                 width: 60vw;
-                aspect-ratio: 8/5; 
-                display: grid;
-                place-items: center;
-                background-color: #302f306c;
-                align-items: center;
-                justify-content: center;
-
-                a{
-                    img{
+                
+                .project-link{
+                    background-color: #0e0e0e00;
+                    border-color: #0e0e0e00;
+                    .project-image{
                         padding-top: 3vw;
-                        padding-bottom: 1vw;
                         width: 55vw;
                         height: auto;
                     }
+                    .project-image:hover{
+                        cursor: pointer;
+                    }
                 }
-                p{
+
+                .project-name{
                     font-size: 3rem;
                     text-align: center;
                     padding-bottom: 2vw;
                 }
-                
+            }
+
+            .right {
+                margin-left: auto;
             }
         }
     }
 }
+.displayProjectsDetail{
+    
+        .project{
+            margin: 2vw;
+            display: grid;
+            grid-template-rows:  5vw auto 5vw;
+            grid-template-columns: 37vw 1fr ;
+            grid-template-areas: 
+                "name name"
+                "explain image"
+                "explain btn";
+                background-color: #0e0e0e;
+
+        }
+
+        .project-expl{
+            grid-area: explain;
+            padding: 1vw;
+            text-align: left;
+        }
+        .project-image{
+            grid-area: image;
+            margin-left: auto;
+            padding: 2vw 2vw 2vw 0;
+            width: 55vw;
+            height: auto;
+        }
+        .sight-btn{
+            grid-area: btn;
+            background-color: #942222;
+            margin-right: 2vw;
+            width: 12vw;
+            height: 3vw;
+            margin-left: auto;
+        }
 
 
+        .project-name{
+            grid-area: name;
+            font-size: 3rem;
+            padding-top: 1vw;
+            padding-left: 2.5vw;
+            text-align: left;
+        }
+}
+#contact {
+            grid-area: footer;
+            background-color: #4b4a4a80;
+        }
 a {
     text-decoration: none;
     color:#FAFAFA;
