@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-    background-image: url('images/noise.jpg');
+    background-image: url('Images/noise.jpg');
     background-position: center center; 
     image-rendering: pixelated;
     background-size: 400% auto;
