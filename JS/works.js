@@ -9,7 +9,7 @@ function createProjectCard(project) {
     displayImage.src = "../Images/" + project.imageName;
     displayImage.alt = project.alt;
 
-    const diaplayName = document.createElement('h2');
+    const diaplayName = document.createElement('h3');
     diaplayName.classList.add('project-name');
     diaplayName.textContent = project.name;
 
@@ -21,25 +21,18 @@ function createProjectCard(project) {
     btnText.classList = "btn-text";
     btnText.textContent = "Play"
 
-    const fileButton = document.createElement('button');
-    fileButton.classList = "sight-btn"
-    fileButton.appendChild(btnText);
-    fileButton.addEventListener("click", () => {
-        window.location.href = project.sightLink;
-    });
 
     card.appendChild(diaplayName);
     card.appendChild(diaplayExplain);
     card.appendChild(displayImage);
-    card.appendChild(fileButton);
     
 
     return card;
 }
 
-const contaner = document.querySelector(".displayProjectsDetail")
-projects.map(project => {
-    const card = createProjectCard(project);
+const contaner = document.querySelector(".displayWorks")
+works.map(work => {
+    const card = createProjectCard(work);
     contaner.appendChild(card);
 })
 

@@ -20,7 +20,7 @@ body {
     max-width: 100vw;
     
     display: grid;
-    grid-template-rows: 60px 1fr 100px;
+    grid-template-rows: 60px 1fr 350px;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "header"
@@ -33,7 +33,7 @@ body {
     position: fixed;
     width: 100vw;
     height: 60px;
-    background-color: #424242ab;
+    background-color: #252525f8;
     display: flex;
     text-align: center;
     overflow: auto;
@@ -152,40 +152,73 @@ body {
 }
 .displayProjectsDetail{
     
+    .project{
+        margin: 2vw;
+        display: grid;
+        grid-template-rows:  5vw auto 5vw;
+        grid-template-columns: 37vw 55vw ;
+        grid-template-areas: 
+            "name name"
+            "explain image"
+            "explain btn";
+        background-color: #0e0e0e;
+
+    }
+
+    .project-expl{
+        grid-area: explain;
+        padding: 1vw;
+        text-align: left;
+    }
+    .project-image{
+        grid-area: image;
+        margin-left: auto;
+        padding: 2vw 2vw 2vw 0;
+        width: 55vw;
+        height: auto;
+    }
+    .sight-btn{
+        grid-area: btn;
+        background-color: #942222;
+        margin-right: 2vw;
+        width: 12vw;
+        height: 3vw;
+        margin-left: auto;
+    }
+
+
+    .project-name{
+        grid-area: name;
+        font-size: 3rem;
+        padding-top: 1vw;
+        padding-left: 2.5vw;
+        text-align: left;
+    }
+}
+.displayWorks{
         .project{
             margin: 2vw;
             display: grid;
-            grid-template-rows:  5vw auto 5vw;
-            grid-template-columns: 37vw 1fr ;
+            grid-template-rows:  5vw auto;
+            grid-template-columns: 55vw 37vw  ;
             grid-template-areas: 
                 "name name"
-                "explain image"
-                "explain btn";
-                background-color: #0e0e0e;
-
-        }
+                "image explain";
+            background-color: #0e0e0e;
 
         .project-expl{
             grid-area: explain;
-            padding: 1vw;
+            padding: 2vw;
             text-align: left;
+            font-size: larger;
         }
         .project-image{
             grid-area: image;
             margin-left: auto;
-            padding: 2vw 2vw 2vw 0;
+            padding: 0 0 2vw 2vw;
             width: 55vw;
             height: auto;
         }
-        .sight-btn{
-            grid-area: btn;
-            background-color: #942222;
-            margin-right: 2vw;
-            width: 12vw;
-            height: 3vw;
-            margin-left: auto;
-        }
-
 
         .project-name{
             grid-area: name;
@@ -194,17 +227,148 @@ body {
             padding-left: 2.5vw;
             text-align: left;
         }
+    }
+    
 }
+
 #contact {
-            grid-area: footer;
-            background-color: #4b4a4a80;
-        }
+    grid-area: footer;
+    background-color: #252525f8;
+    #contact-header{
+        padding: 1rem 2rem;
+    }
+    
+}
+.contact-body{
+        gap: 40px;
+        display: flex;
+
+    #contactBtn{
+        margin: -35px 0;
+        background-color: #47ce6f;
+        height: 250px;
+        width: 250px;
+        padding-top: 150px;
+        text-align: center;
+        color: #0e0e0e;
+        font-size: large;
+        font-family: "cascadia-code";
+        font-weight: bolder;
+        border-radius: 50%;
+        outline-color: #0e0e0e;
+        outline-width: 2px;
+        outline-style:solid;
+        cursor: pointer;
+    }
+    #contactBtn:hover{
+        color:#FAFAFA;
+        background-color:#0e0e0e;
+    }
+    
+}
+.contact-options{
+    display: flex;
+    text-align: center;
+    overflow: auto;
+    padding: 30px 50px 50px 20px;
+    justify-content:first baseline;
+    list-style-type: none;
+}
+.contact{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.877), rgba(34, 34, 34, 0.63));
+    margin: 0 20px;
+    width: 300px;
+    height: 125px;
+    border-radius: 15px;
+    border-width: 5px;
+    outline-color: #FAFAFA;
+    outline-width: 1px;
+    outline-style:solid;
+    
+
+    h2{
+        padding-bottom: 15px;
+        padding-top: 10px;
+        
+    }
+    a{
+        color:#FAFAFA;
+        font-family: 'cascadia-code', sans-serif;
+        font-size: medium
+    }
+}
+#contactInMain{
+    align-items: center;
+    padding: 2% 8%;
+
+    #title-contact{
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+#user-input{
+    padding: 0 30%;
+    align-items: center;
+    display:flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.form{
+    font-family: 'cascadia-code', sans-serif;
+    font-size: larger;
+    background-color: #0e0e0e;
+    color: #FAFAFA;
+    height: 3rem;
+    width: 600px;
+    height: 50px;;
+    }
+#name-input{
+    display: flex;
+    width: 600px;
+    gap: 25px;
+}
+#message{
+    height: 100px;
+}
+input{
+    color:#FAFAFA;
+    background-color: #0e0e0e;
+}
+input::placeholder {
+        color: #FAFAFA;
+        opacity: 0.9;
+}
+
+textarea::placeholder {
+        color: #FAFAFA;
+        opacity: 0.9;
+}
+#submit{
+    align-items: center;
+    width: 600px;
+    height: 4rem;
+    font-family: 'cascadia-code', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    background-color: #47ce6f;
+    border-radius: 30px;
+    margin-bottom: 5px;
+
+}
+#valid-error{
+    height: 150px;
+    
+}
+#submit:hover{
+    background-color: #FAFAFA;
+}
 a {
     text-decoration: none;
     color:#FAFAFA;
 }
 a:hover {
-    color: #B200C8;
+    color: #47ce6f;
 }
 
 p {
@@ -213,7 +377,11 @@ p {
     font-size: large
 }
 
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 2vw, 6rem);
+}
 h2{
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(3rem, 2vw, 5rem);
+    font-size: clamp(2rem, 2vw, 3rem);
 }

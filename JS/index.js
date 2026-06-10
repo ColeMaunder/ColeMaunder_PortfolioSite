@@ -1,3 +1,4 @@
+const homeIDList = [{ id: 1, type: "art" }, { id: 1, type: "design" }, { id: 2, type: "art" } ,{ id: 2, type: "design" }];
 
 function createProjectCard(project, right) {
     const card = document.createElement('div');
@@ -17,7 +18,7 @@ function createProjectCard(project, right) {
     displayImage.src = "../Images/" + project.imageName;
     displayImage.alt = project.alt;
 
-    const diaplayName = document.createElement('h3');
+    const diaplayName = document.createElement('h2');
     diaplayName.classList.add('project-name');
     diaplayName.textContent = project.name;
 
@@ -34,7 +35,17 @@ function createProjectCard(project, right) {
 
 const contaner = document.querySelector(".displayProjects")
 var right = false
-projects.map(project => {
+homeIDList.map(idIn => {
+    var project;
+    switch (idIn.type) {
+        case ("art"):
+            project = projects.find(project => project.id == idIn.id);
+            break;
+        case ("design"):
+            project = works.find(project => project.id == idIn.id);
+            break;
+    }
+     console.log(project)
     const card = createProjectCard(project, right);
     right = !right
     contaner.appendChild(card);

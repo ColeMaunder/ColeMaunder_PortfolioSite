@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../JS/contact.js" defer></script>
 </head>
 <body>
     <header class="top-nav">
@@ -13,12 +14,76 @@
         <nav class ="navigation">
             <li><a href="../index.html" >Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="works.html">Works</a></li>
+            <li><a href ="projects.html">Projects</a></li>
+            <li><a href ="works.html">Works</a></li>
             <li><a id = "activePage">Contact</a></li>
         </nav>
         <a href="#contact" id = "talkBtn">Let's talk</a>
     </header>
-    
+    <section clas ="contact"></section>>
+    <main class="main-content">
+        <section id = "contactInMain" >
+            <h1 id = "title-contact">Contact</h1>
+            <ul class = "contact-options" id = "contactInMain">
+                
+                <li class = "contact" id = "e-mailDispaly">
+                    <h2>E-mail Address</h2>
+                    <p>cole@maunder.co.za</p>
+                </li>
+                <li class = "contact"  id = "cell">
+                    <h2>Contact Me</h2>
+                    <p>+27 62 905 3788</p>
+                </li>
+                <li class = "contact"  id = "gitHub">
+                    <h2>GitHub</h2>
+                    <a href ="https:github.com/ColeMaunder">github.com/ColeMaunder<a>
+                </li>
+                <li class = "contact"  id = "itch.io">
+                    <h2>itch.io</h2>
+                    <a href ="https://colehm.itch.io/">colehm.itch.io</a>
+                </li>
+                </ul>
+            </ul>
+    </section>
+        <section id = "user-input">
+            <h1>Get In Touch</h1>
+            <section id= "name-input" >
+                <input type="fname" class = "form" id="first-name" name="first-name" placeholder="First name" required>
+                <input type="lname" class = "form" id="last-name" name="last-name" placeholder="Last name" required>
+            </section>
+            <input type="fname" class = "form" id="e-mail" name="e-mail" placeholder="Enter your e-mail" required>
+            <input type="phone" class = "form" id="phone" name="phone" placeholder="Enter your mobile no." required>
+            <textarea name="message" class = "form" id="message" rows="5"  placeholder="Write message..."></textarea>
+            <button type ="submit" id = "submit" >
+                <span>Send Message</span>
+            </button>
+            <p id = "valid-error"></p>
+        </section>
+    </main>
+    <footer id ="contact">
+            <h1 class ="contact-header">Get in Contact</h1>
+            <section class= "contact-body" >
+                <ul class= "contact-options">
+                <li class = "contact" id = "e-mailDisplay">
+                    <h2>E-mail Address</h2>
+                    <p>cole@maunder.co.za</p>
+                </li>
+                <li class = "contact"  id = "cell">
+                    <h2>Contact Me</h2>
+                    <p>+27 62 905 3788</p>
+                </li>
+                <li class = "contact"  id = "gitHub">
+                    <h2>GitHub</h2>
+                    <a href ="https:github.com/ColeMaunder">github.com/ColeMaunder<a>
+                </li>
+                <li class = "contact"  id = "itch.io">
+                    <h2>itch.io</h2>
+                    <a href ="https://colehm.itch.io/">colehm.itch.io</a>
+                </li>
+                </ul>
+                <a href="../html/contact.html" id = "contactBtn">Get In Touch</a>
+            </section>
+
+        </footer>
 </body>
 </html>
