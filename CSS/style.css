@@ -18,9 +18,9 @@ body {
     color: rgb(224, 222, 222);
     height: auto;
     max-width: 100vw;
-    
+    width: 100vw;
     display: grid;
-    grid-template-rows: 60px 1fr 350px;
+    grid-template-rows: 60px 1fr 380px;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "header"
@@ -43,15 +43,16 @@ body {
 
     #name {
         padding: 0 1rem;
-        font-size: clamp(2rem, 3vw, 5rem);
+        font-size: clamp(1rem, 2vw, 6rem);
         color: #FAFAFA;
+        white-space: nowrap;
     }
 
     .navigation {
         list-style-type: none;
         display: flex;
-        gap: 3rem;
-        padding: 0 3rem;
+        gap: 4vw;
+        padding: 0 3vw;
         font-size: clamp(2rem, 2vw, 4rem);
         color: #FAFAFA;
         #activePage {
@@ -60,22 +61,24 @@ body {
     }
 
     #talkBtn {
-    background-color: #c6c2c7;
+    background-color:  #47ce6f;;
     color: #0e0e0e;
-    padding: 0 2rem;
+    padding: 0 2vw;
     /*border: 2px solid #0d0d0d;*/
     border-radius: 5px;
-    font-size: clamp(1.5rem, 2vw, 3rem);
+    white-space: nowrap;
+    font-size: clamp(2rem, 2vw, 4rem);
     cursor: pointer;
     }
     #talkBtn:hover {
-        background-color: #8a868a;
+        background-color:ghostwhite;
         color: #0e0e0e;
     }
     
 }
 
 .main-content {
+    
     grid-area: main;
     display: flex;
     display: grid; 
@@ -88,17 +91,19 @@ body {
 
     #splashScreen {
         grid-area: splashScreen;
-        background-image: url(../Images/hades-2.jpg);
+        background-image: url(../Images/Rabit.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         background-color: #0e0e0e;
         align-items: center;
         height: calc(100vh - 60px);
+        width: 100vw;
     }
     #aboutMe {
+        width: 100vw;
         grid-area: aboutMe;
-        padding: 5rem 2rem 2rem 2rem;
+        padding: 5vw 2rem 2vw 2rem;
 
         .body{
             display: flex;
@@ -119,6 +124,7 @@ body {
         grid-area: projects;
         text-align: center;
         padding: 2rem;
+        width: 100vw;
 
         .displayProjects{
             .project{
@@ -129,8 +135,8 @@ body {
                     border-color: #0e0e0e00;
                     .project-image{
                         padding-top: 3vw;
-                        width: 55vw;
-                        height: auto;
+                        width: auto;
+                        height: 55vh;
                     }
                     .project-image:hover{
                         cursor: pointer;
@@ -196,6 +202,7 @@ body {
     }
 }
 .displayWorks{
+    
         .project{
             margin: 2vw;
             display: grid;
@@ -205,12 +212,16 @@ body {
                 "name name"
                 "image explain";
             background-color: #0e0e0e;
+            p{
+                font-size: 4rem;
+            }
 
         .project-expl{
             grid-area: explain;
             padding: 2vw;
             text-align: left;
             font-size: larger;
+            
         }
         .project-image{
             grid-area: image;
@@ -233,25 +244,36 @@ body {
 
 #contact {
     grid-area: footer;
+    width: 100vw;
     background-color: #252525f8;
     #contact-header{
         padding: 1rem 2rem;
     }
     
 }
+.contact-header{
+    padding: 20px 80px;
+}
 .contact-body{
-        gap: 40px;
+    p{
+        font-size: large;
+    }
+    overflow-wrap: break-word;
+  hyphens: auto;
+        gap: 2vw;
         display: flex;
 
     #contactBtn{
+        white-space: nowrap;
         margin: -35px 0;
+        margin-left: 0.5vw;
         background-color: #47ce6f;
-        height: 250px;
-        width: 250px;
-        padding-top: 150px;
+        height: 10vw;
+        width: 10vw;
+        padding-top: 5vw;
         text-align: center;
         color: #0e0e0e;
-        font-size: large;
+        font-size: 2rem;
         font-family: "cascadia-code";
         font-weight: bolder;
         border-radius: 50%;
@@ -264,13 +286,19 @@ body {
         color:#FAFAFA;
         background-color:#0e0e0e;
     }
+    p{
+        font-size: large;
+    }
     
 }
 .contact-options{
+    p{
+        font-size: large;
+    }
     display: flex;
     text-align: center;
     overflow: auto;
-    padding: 30px 50px 50px 20px;
+    padding: 70px 50px 50px 70px;
     justify-content:first baseline;
     list-style-type: none;
 }
@@ -289,25 +317,30 @@ body {
     h2{
         padding-bottom: 15px;
         padding-top: 10px;
+        white-space: nowrap;
+        font-size: clamp(1rem, 2vw, 2.5rem)
         
     }
     a{
         color:#FAFAFA;
         font-family: 'cascadia-code', sans-serif;
-        font-size: medium
+        font-size: medium;
+        white-space: nowrap;
     }
 }
 #contactInMain{
+    width: 100vw;
     align-items: center;
-    padding: 2% 8%;
+    padding: 2vw 8vw;
 
     #title-contact{
         text-align: center;
-        padding: 20px;
+        padding: 3vw;
     }
 }
 
 #user-input{
+    width: 100vw;
     padding: 0 30%;
     align-items: center;
     display:flex;
@@ -315,6 +348,7 @@ body {
     flex-direction: column;
 }
 .form{
+    
     font-family: 'cascadia-code', sans-serif;
     font-size: larger;
     background-color: #0e0e0e;
@@ -360,6 +394,56 @@ textarea::placeholder {
     height: 150px;
     
 }
+#aboutME-header{
+    width: 100vw;
+    text-align: center;
+    padding: 20px;
+
+}
+#aboutME-bodyText{
+    width: 100vw;
+    font-size: 3rem;
+    padding: 30px;
+}
+#skill-header{
+    padding: 30px
+}
+.skills{
+    width: 100vw;
+    padding: 40px 0 125px 0;
+}
+.skill{
+    display:flex;
+    align-self: center;
+    gap: 20px;
+    padding: 20px 5vw;
+    h2{
+       font-size: 4rem;
+       padding-top: 15px;
+       padding-right: 50px;
+       
+    }
+    progress{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        width: 1500px;
+        height: 100px;
+        color: #000000;
+    }
+    progress::-webkit-progress-bar {
+    background-color:#0e0e0e;
+    border-radius: 4px;
+    border-color: #FAFAFA;
+    border-style: solid;
+    }
+    progress::-webkit-progress-value {
+    background-color:#FAFAFA;
+    border-radius: 2px;
+    }
+}
+
 #submit:hover{
     background-color: #FAFAFA;
 }
@@ -374,14 +458,55 @@ a:hover {
 p {
     color:#FAFAFA;
     font-family: 'cascadia-code', sans-serif;
-    font-size: large
+    font-size: 5rem
 }
 
 h1{
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(3rem, 2vw, 6rem);
+    font-size: 5rem;
+    text-decoration: underline;
+    text-decoration-color:  #47ce6f; 
+    text-underline-offset: 20px;
+    text-decoration-thickness: 15px;
 }
 h2{
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: 2.5rem
+}
+@media (max-width: 1150px) {
+    body {
+        grid-template-rows: 60px 1fr 900px;;
+    }
+    .right {
+                margin-left: auto;
+            }
+    .project-image{
+        width: 10vw;
+        padding: auto;
+    }
+    #projects {
+        width: 50vw;
+    }
+     #aboutMe {
+        .body{
+            display: flex;
+            flex-direction: column;
+            .img{
+                width: 80vw;
+                height: 20vh;
+                padding: 20vh 0;
+            }
+        }
+    } 
+    h1{
+        color: #fc0f0f;
+    }
+    .contact-options{
+        display: flex;
+        flex-direction: column;
+    }
+}
+html, body {
+    max-width: 100%;
+    overflow-x: clip; /* Modern alternative to 'hidden' that prevents horizontal scrolling without breaking sticky positioning */
 }
