@@ -15,7 +15,7 @@ function createProjectCard(project, right) {
 
     const displayImage = document.createElement('img');
     displayImage.classList.add("project-image")
-    displayImage.src = "../Images/" + project.imageName;
+    displayImage.src = "Images/" + project.imageName;
     displayImage.alt = project.alt;
 
     const diaplayName = document.createElement('h2');
