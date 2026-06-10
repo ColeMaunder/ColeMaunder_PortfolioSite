@@ -5,13 +5,13 @@
 }
 @font-face {
     font-family: 'cascadia-code';
-    src: url('../fonts/CascadiaCode-VariableFont_wght.ttf') format('truetype');
+    src: url('fonts/CascadiaCode-VariableFont_wght.ttf') format('truetype');
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-    background-image: url('../images/noise.jpg');
+    background-image: url('images/noise.jpg');
     background-position: center center; 
     image-rendering: pixelated;
     background-size: 400% auto;
@@ -91,7 +91,7 @@ body {
 
     #splashScreen {
         grid-area: splashScreen;
-        background-image: url(../Images/Rabit.jpeg);
+        background-image: url(Images/Rabit.jpeg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
